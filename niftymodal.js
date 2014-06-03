@@ -8,12 +8,8 @@
   "use strict";
   
   var $b = $('body');
- 
-  var Plugin = function(options) {
-    
-  };
   
-  var Modal = {
+  var NiftyModal = {
     $el: null,
     $content: null,
     $overlay: null,
@@ -61,17 +57,7 @@
     }
   };
   
-  $.fn.niftyModal = function(options) {
-    if(this.length) {
-      return this.each(function() {
-        var p = new Plugin();
-        p.init(options, this);
-        $.data(this, 'niftyModal', p);
-      });
-    }
-  };
-  
-  $.fn.niftyModal.Modal = Modal;
+  $.NiftyModal = NiftyModal;
   
   $.fn.niftyModal.defaults = {
     classPrefix: 'modal-'
